@@ -1,0 +1,22 @@
+{
+    "name": "myCompLib",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "dev": "vuepress dev docs --open",
+        "build": "vuepress build docs",
+        "deploy": "bash deploy.sh"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "bory-date-picker": "^1.0.1",
+        "moment": "^2.27.0",
+        "vuepress": "^1.5.2"
+    },
+    "devDependencies": {
+        "@vuepress/plugin-active-header-links": "^1.5.2",
+        "@vuepress/plugin-medium-zoom": "^1.5.2",
+        "sass": "^1.26.10",
+        "sass-loader": "^9.0.1"
+    }
+}

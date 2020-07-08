@@ -1,0 +1,40 @@
+Arguments: 
+  /Users/bory/.nvm/versions/node/v10.17.0/bin/node /Users/bory/.nvm/versions/node/v10.17.0/bin/yarn add vuepress
+
+PATH: 
+  /Users/bory/flutter/bin:/Users/bory/.rvm/gems/ruby-2.5.1/bin:/Users/bory/.rvm/gems/ruby-2.5.1@global/bin:/Users/bory/.rvm/rubies/ruby-2.5.1/bin:/Users/bory/.nvm/versions/node/v10.17.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/aria2/bin:/Library/Apple/usr/bin:/Applications/Wireshark.app/Contents/MacOS:/Users/bory/.rvm/bin:/Users/bory/Library/Android/sdk/emulator:/Users/bory/Library/Android/sdk/tools:/Users/bory/Library/Android/sdk/tools/bin:/Users/bory/Library/Android/sdk/platform-tools:/usr/local/mongodb/bin
+
+Yarn version: 
+  1.22.0
+
+Node version: 
+  10.17.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/bory/Desktop/杂货铺/myCompLib/package.json: Unexpected string in JSON at position 177
+      at JSON.parse (<anonymous>)
+      at /Users/bory/.nvm/versions/node/v10.17.0/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/bory/.nvm/versions/node/v10.17.0/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/bory/.nvm/versions/node/v10.17.0/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+      "name": "myCompLib",
+      "version": "1.0.0",
+      "main": "index.js",
+      "scripts": {
+          "dev": "vuepress dev docs",
+          "build": "vuepress build docs"
+      }
+      "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
