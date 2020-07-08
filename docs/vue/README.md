@@ -18,8 +18,6 @@ title: 组件总览
 <img src='https://img.cdn.aliyun.dcloud.net.cn/stream/plugin_screens/2feecfb0-b5bf-11ea-ad76-a11480dcc0f4_4.jpeg?v=1593399013' class='effect'>
 
 
-[查看具体](/uniapp/datepicker.html)
-
 
 <style scope>
 .effect{

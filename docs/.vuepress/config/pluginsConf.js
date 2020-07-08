@@ -3,4 +3,5 @@ module.exports = {
         selector: 'img.effect'
     },
     '@vuepress/active-header-links': true,
+    '@vuepress/back-to-top': true,
 }
