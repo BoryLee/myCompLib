@@ -14,5 +14,6 @@ module.exports = {
         nav: navConf,
         sidebar: sidebarConf,
         smoothScroll: true,
+        lastUpdated: '更新时间',
     }
 }
