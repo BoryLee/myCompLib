@@ -1,10 +1,15 @@
 module.exports = {
     '/uniapp/': [
-        '',
-        'datepicker'
+        ''
     ],
     '/vue/': [
         '',
-        'datepicker'
+        'picker',
+        'datepicker',
+        'calendar',
+        'radio',
+        'checkbox',
+        'collapse',
+        'tag',
     ]
 }

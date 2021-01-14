@@ -7,22 +7,35 @@ title: 组件总览
 :::
 
 
+```sh
+yarn add jc-mobile-ui
+or
+npm install jc-mobile-ui
+```
+
+
+**引入项目**
+
+```js
+import Vue from 'vue';
+import JCMobileUI from 'jc-mobile-ui';
+Vue.use(JCMobileUI);
+```
+
+
 ## 阴阳历日期选择器
 
-效果图：
+扫二维码体验：
 
-<img src='https://img.cdn.aliyun.dcloud.net.cn/stream/plugin_screens/2feecfb0-b5bf-11ea-ad76-a11480dcc0f4_0.jpeg?v=1593399013' class='effect'>
-<img src='https://img.cdn.aliyun.dcloud.net.cn/stream/plugin_screens/2feecfb0-b5bf-11ea-ad76-a11480dcc0f4_1.jpeg?v=1593399013' class='effect'>
-<img src='https://img.cdn.aliyun.dcloud.net.cn/stream/plugin_screens/2feecfb0-b5bf-11ea-ad76-a11480dcc0f4_2.jpeg?v=1593399013' class='effect'>
-<img src='https://img.cdn.aliyun.dcloud.net.cn/stream/plugin_screens/2feecfb0-b5bf-11ea-ad76-a11480dcc0f4_3.jpeg?v=1593399013' class='effect'>
-<img src='https://img.cdn.aliyun.dcloud.net.cn/stream/plugin_screens/2feecfb0-b5bf-11ea-ad76-a11480dcc0f4_4.jpeg?v=1593399013' class='effect'>
+<img :src="$withBase('/assets/datepicker.png')" class='effect'/>
 
 
+## Radio单选框
 
 <style scope>
-.effect{
+.effect.medium-zoom-image{
     width: 200px;
-    height: 300px;
+    height: 200px;
     margin: 10px;
 }
 </style>
