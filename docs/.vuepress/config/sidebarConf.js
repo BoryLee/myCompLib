@@ -1,15 +1,22 @@
 module.exports = {
     '/uniapp/': [
-        ''
+        '',
+        'canvas'
     ],
     '/vue/': [
         '',
-        'picker',
-        'datepicker',
-        'calendar',
+        'button',
+        'icon',
+        'cell',
         'radio',
         'checkbox',
-        'collapse',
-        'tag',
+        'switch',
+        'input',
+        'picker',
+        'dialog',
+        'datetime',
+        'popup',
+        'actionsheet',
+        'timeline'
     ]
 }

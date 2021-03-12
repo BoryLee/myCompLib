@@ -1,3 +1,7 @@
+---
+sidebarDepth: 2
+---
+
 # uni-app开发经验分享
 
 
@@ -35,7 +39,7 @@ url有长度限制，太长的字符串会传递失败,可通过窗口通信(下
 
 示例：
 
-```vue
+```js
 //pageA页面
 const data = {
     //多个参数
@@ -73,7 +77,7 @@ onLoad(option){
 - onBackPress
     - 监听页面返回，返回 event = {from:backbutton、 navigateBack} ，backbutton 表示来源是左上角返回按钮或 android 返回键；navigateBack表示来源是 uni.navigateBack。在回调函数中如果想进行一些逻辑判断的话，可以通过动态的设置return true禁止返回上一个页面，return false返回上一个页面
     
-    ```vue
+    ```js
     onBackPress(event){
         const { from } = event;
         if(from === 'backbutton'){
@@ -101,7 +105,7 @@ onLoad(option){
 
 App.vue 中定义globalData的相关配置：
 
-```vue
+```js
 //App.vue
 <script>
     export default{
@@ -119,7 +123,7 @@ getApp().globalData.msg = 'uni-app!'
 ```
 ### 路由跳转传参
 
-```vue
+```js
 //pageA页面
 uni.navigateTo({
     url: `/pages/pageB/pageB?name=uni-app&age=18`
@@ -136,7 +140,7 @@ onLoad(option){
 
 多用于页面间事件通信，页面A跳转到B传参，B页面返回A页面传参
 
-```vue
+```js
 //pageA
 uni.navigateTo({
 		url: '/pages/pageB/pageB',
@@ -241,12 +245,12 @@ Vue.prototype.$bus = new Bus()
 Vue.prototype.$bus = new Vue()
 ```
 
-```vue
+```js
 //pageA或componentA
 this.$bus.$emit(事件名,参数)
 ```
 
-```vue
+```js
 //pageB或componentB
 this.$bus.$on(事件名,回调函数)
 ```
@@ -579,6 +583,7 @@ export default {
 <template>
     <child @click='handleEvent' @change='handleChange' v-on='$listeners'></child>
 </template>
+<script>
 export default {
   components: {
     Child
@@ -597,7 +602,7 @@ export default {
 ```
 
 
-```vue
+```js
 //子组件
 <script>
     export default {
@@ -612,7 +617,7 @@ export default {
 
 ##### provide和inject 能够实现祖先和后代之间传值
 
-```vue
+```js
 //祖先组件
 export default {
    provide(){
@@ -667,11 +672,11 @@ export default {
 示例：
 
 ```javascript
-#ifdef APP-PLUS
+
+    #ifdef APP-PLUS
     let loading；
     // #ifdef APP-PLUS
-    //请求开始
-		loading = plus.nativeUI.showWaiting('数据加载中...', {
+		loading = plus.nativeUI.showWaiting('数据加载中...', {//请求开始
 			background: 'rgba(0,0,0,0.3)', 
 			color: '#fff',
 			width:'100%',
@@ -688,6 +693,7 @@ export default {
 		//请求成功或失败
 		loading.close()
 	// #endif
+	
 ```
 
 **注意：**
@@ -788,7 +794,6 @@ export default {
 				const {statusBarHeight} = uni.getSystemInfoSync()
 				const query = uni.createSelectorQuery().in(this);
 				query.select('#main').boundingClientRect(data => {
-					console.log(data);
 					const { top,left,width,height } = data;
 					// #ifdef APP-PLUS
 					const pages = getCurrentPages();

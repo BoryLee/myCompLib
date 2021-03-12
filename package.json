@@ -11,6 +11,8 @@
     "dependencies": {
         "bory-date-picker": "^1.0.1",
         "moment": "^2.27.0",
+        "qrcode": "^1.4.4",
+        "qrcodejs2": "^0.0.2",
         "vuepress": "^1.5.2"
     },
     "devDependencies": {

@@ -1,41 +1,45 @@
----
-title: 组件总览
----
+
+# 整体介绍
+
+基于uniapp封装的一套通用的组件库
+
+使用方式：
+
+- 传统vue组件，需要安装、引用、注册，三个步骤后才能使用组件
+  - 通过import手动引入
+- easycom：只要组件安装在项目的components目录下，并符合components/组件名称/组件名称.vue目录结构。就可以不用引用、注册，直接在页面中使用
+  - pages.json添加配置项easycom
+
+  ```json
+  "easycom": {
+		"autoscan": true,
+		"custom": {
+			"^jc-(.*)": "@/components/jc-$1/jc-$1.vue"
+		}
+	}
+  ```
+
+<!-- ### 效果图
+
+<jc-phone/> -->
 
 ::: tip
-这是一套与uniapp对应的不依赖于ui库的纯vue开发的适用于移动端的组件
+
+目前封装的组件有：
+- Button 按钮
+- Icon 图标
+- Cell 单元格
+- Radio 单选框
+- Checkbox 复选框
+- Switch 开关
+- Input 输入框
+- Picker 输入框
+- Dialog 弹出层
+- DateTime 时间选择器
+- Popup 弹出层
+- ActionSheet 动作面板
+- TimeLine 时间轴
+
 :::
 
 
-```sh
-yarn add jc-mobile-ui
-or
-npm install jc-mobile-ui
-```
-
-
-**引入项目**
-
-```js
-import Vue from 'vue';
-import JCMobileUI from 'jc-mobile-ui';
-Vue.use(JCMobileUI);
-```
-
-
-## 阴阳历日期选择器
-
-扫二维码体验：
-
-<img :src="$withBase('/assets/datepicker.png')" class='effect'/>
-
-
-## Radio单选框
-
-<style scope>
-.effect.medium-zoom-image{
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-}
-</style>
